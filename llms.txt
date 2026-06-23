@@ -1,0 +1,29 @@
+# Aniwordle
+
+> Free daily anime guessing games. Identify a mystery anime character from a
+> blurred image, or play the anime wordle (animedle) where each guess reveals
+> matching attributes. New puzzles every day, no sign-up required.
+
+Aniwordle is a fan-made web game site in the anime quiz / daily guessing-game
+genre (similar in format to Wordle). All games share one curated dataset of
+popular anime characters and refresh daily at midnight UTC.
+
+## Games
+
+- [Guess the Character](https://aniwordle.com/guess-the-character): Name the anime
+  character from a progressively unblurred image. Six guesses, with hints
+  (gender, debut year, role, anime). Daily puzzle plus unlimited practice.
+- [Anime Wordle (Animedle)](https://aniwordle.com/anime-wordle): Guess the daily
+  mystery character; an attribute grid (anime, gender, role, genres, debut year,
+  popularity) shows how each guess compares to the answer.
+
+## About
+
+- [Home](https://aniwordle.com/): Overview of all games.
+- [About](https://aniwordle.com/about): What Aniwordle is and how it works.
+- [Privacy](https://aniwordle.com/privacy): Privacy and data handling.
+
+## Notes
+
+Character data and images are sourced from public anime databases (AniList) for
+editorial/fan use and remain the property of their respective rights holders.
