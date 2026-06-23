@@ -21,6 +21,9 @@ RewriteRule ^ / [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
+# --- Locale root: /es is generated as es.html, while /es/ has an index fallback ---
+RewriteRule ^es$ es.html [L]
+
 # --- Remove trailing slash (canonical URLs have none), except real dirs ---
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+?)/$ /$1 [R=301,L]
