@@ -21,8 +21,15 @@ RewriteRule ^ / [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
-# --- Locale root: /es is generated as es.html, while /es/ has an index fallback ---
+# --- Pages that share a name with a directory of children (es, blog, es/blog) ---
+# These are generated as <name>.html AND have a <name>/ folder. Serve the .html for
+# the no-slash URL before mod_dir's DirectorySlash can 301 it to the slashed form
+# (which would otherwise 403 or redirect the canonical URL). A <name>/index.html copy
+# (see scripts/fix-hostinger-routes.mjs) covers the slashed form as a fallback.
+DirectorySlash Off
 RewriteRule ^es$ es.html [L]
+RewriteRule ^es/blog$ es/blog.html [L]
+RewriteRule ^blog$ blog.html [L]
 
 # --- Remove trailing slash (canonical URLs have none), except real dirs ---
 RewriteCond %{REQUEST_FILENAME} !-d
